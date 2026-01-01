@@ -1,5 +1,5 @@
 // Scope (Global, Function, Block Scope)
-"use strict"; 
+// "use strict"; 
 
 const name = "john"; // Global
 
@@ -23,5 +23,21 @@ function add(){
 add();
 
 
-name = "antu"; // it takes as a window.name = "antu" and without this "use strict" it will give you an error
-console.log(name)
+// name = "antu"; // it takes as a window.name = "antu" and without this "use strict" it will give you an error
+// console.log(name)
+
+
+
+// Block Scope
+const isStudent = true;
+
+function modifyStudent (ans){
+    let courseAccess = true;
+    if(ans){
+        let supportSessionAccess = "available";
+        console.log(courseAccess, supportSessionAccess);
+    }
+    // console.log(supportSessionAccess);
+}
+
+modifyStudent(isStudent);
